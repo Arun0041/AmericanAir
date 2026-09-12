@@ -1,0 +1,201 @@
+id,text,true_intent,needs_escalation,suggested_action,label_note
+g000,"@AmericanAir AA451 delayed 4hrs at DFW, miss connection to MIA, hotel?",flight_delay,0,auto,"needs rebooking info, not safety"
+g001,"AA451 delayed again 2nd day in a row, crew rude, want compensation now",complaint_service,1,human,repeat + rude -> human
+g002,"@AmericanAir cancelled AA209 to JFK today, stranded with 2 kids tonight",cancellation,1,human,same-day stranded family
+g003,"cancelled flight, need rebook tomorrow morning, flexible",cancellation,0,auto,non-urgent rebook can auto-handle
+g004,"need to change AA120 to Friday, what fare diff?",booking_change,0,auto,routine
+g005,change name spelling SMITH/SMYTH on booking X7K2PQ,booking_change,0,auto,routine
+g006,"bag missing 3 days AA88 JFK tag 09123, meds inside!",baggage,1,human,medication -> escalate
+g007,"suitcase wheel broken AA77, how claim?",baggage,0,auto,standard damaged-bag flow
+g008,"refund for AA99 you cancelled, nonrefundable ticket",refund_compensation,0,auto,standard refund flow
+g009,"refund denied twice, filing chargeback + DOT complaint AA99",refund_compensation,1,human,legal/financial threat
+g010,cant check in AA310 leaves in 2 hours app crashes,checkin_boarding,0,auto,urgent but solvable with steps
+g011,wheelchair assistance not confirmed AA310 elderly mother,baggage,1,human,care need -> human
+g012,"miles missing AA400 AAdvantage 12345, 3 days ago",loyalty_account,0,auto,standard
+g013,"locked out AAdvantage, reset email never arrives",loyalty_account,0,auto,standard
+g014,"crew humiliated me, discrimination at CLT gate, want supervisor",complaint_service,1,human,discrimination -> human
+g015,thanks AA crew 2142 great with my nervous kid!,praise_other,0,auto,no action
+g016,do you fly direct DFW to Maui?,praise_other,0,auto,general question
+g017,"lawyer will contact you, lost bag with laptop + you ignore DMs",complaint_service,1,human,legal threat
+g018,"unaccompanied minor stuck alone DFW AA77 delayed, help now",flight_delay,1,human,minor safety
+g019,"app shows delayed but gate says on time AA512, which is true?",flight_delay,0,auto,"info conflict, answerable"
+g020,"@AmericanAir stuck LAX delay, tonight hotel who pays AAAA592",flight_delay,0,auto,auto: routine flight_delay
+g021,"@AmericanAir AAAA934 cancelled, rebook to ORD asap",cancellation,1,human,human: same-day rebook risk
+g022,"@AmericanAir move AAAA1033 to Sunday, cost?",booking_change,0,auto,auto: routine booking_change
+g023,@AmericanAir bag delayed AAAA1082 CLT tag ZBC4HT,baggage,0,auto,auto: routine baggage
+g024,@AmericanAir trip credit missing AAAA814 X9MPDJ pls help stranded tonight,refund_compensation,1,human,human: urgent/safety marker
+g025,@AmericanAir gate for AAAA883 CLT? group 5,checkin_boarding,0,auto,auto: routine checkin_boarding
+g026,@AmericanAir status not showing AAAA1463,loyalty_account,0,auto,auto: routine loyalty_account
+g027,@AmericanAir DOT complaint AAAA550 worst ever,complaint_service,1,human,human: complaint needs specialist
+g028,@AmericanAir great crew AAAA1918 thanks!,praise_other,0,auto,auto: routine praise_other
+g029,"@AmericanAir stuck MIA delay, tonight hotel who pays AAAA1043",flight_delay,0,auto,auto: routine flight_delay
+g030,@AmericanAir why cancel AAAA967? need morning option pls help stranded tonight,cancellation,1,human,human: urgent/safety marker
+g031,"@AmericanAir move AAAA260 to Sunday, cost?",booking_change,0,auto,auto: routine booking_change
+g032,@AmericanAir bag fee $75 wrong AAAA333,baggage,0,auto,auto: routine baggage
+g033,@AmericanAir voucher for 3hr delay AAAA1341?,refund_compensation,0,auto,auto: routine refund_compensation
+g034,@AmericanAir gate for AAAA693 LAX? group 5,checkin_boarding,0,auto,auto: routine checkin_boarding
+g035,@AmericanAir status not showing AAAA1364,loyalty_account,0,auto,auto: routine loyalty_account
+g036,@AmericanAir DOT complaint AAAA651 worst ever,complaint_service,1,human,human: complaint needs specialist
+g037,@AmericanAir wifi question AAAA1465?,praise_other,0,auto,auto: routine praise_other
+g038,"@AmericanAir AAAA866 3hr delay LAX, connection at risk",flight_delay,0,auto,auto: routine flight_delay
+g039,@AmericanAir why cancel AAAA1484? need morning option,cancellation,0,auto,auto: routine cancellation
+g040,"@AmericanAir move AAAA868 to Sunday, cost?",booking_change,0,auto,auto: routine booking_change
+g041,@AmericanAir bag fee $75 wrong AAAA1636,baggage,0,auto,auto: routine baggage
+g042,@AmericanAir trip credit missing AAAA1774 F63ZUK,refund_compensation,0,auto,auto: routine refund_compensation
+g043,@AmericanAir checkin fails AAAA557 2hrs to go,checkin_boarding,0,auto,auto: routine checkin_boarding
+g044,@AmericanAir miles missing AAAA143,loyalty_account,0,auto,auto: routine loyalty_account
+g045,@AmericanAir rude gate agent AAAA1022 ORD pls help stranded tonight,complaint_service,1,human,human: complaint needs specialist
+g046,@AmericanAir wifi question AAAA938?,praise_other,0,auto,auto: routine praise_other
+g047,"@AmericanAir stuck LAX delay, tonight hotel who pays AAAA336",flight_delay,0,auto,auto: routine flight_delay
+g048,"@AmericanAir AAAA970 cancelled, rebook to LAX asap",cancellation,1,human,human: same-day rebook risk
+g049,@AmericanAir add checked bag booking TJ92FP AAAA1252,booking_change,0,auto,auto: routine booking_change
+g050,@AmericanAir bag delayed AAAA1750 CLT tag UGGR43,baggage,0,auto,auto: routine baggage
+g051,@AmericanAir trip credit missing AAAA348 WPCYZB,refund_compensation,0,auto,auto: routine refund_compensation
+g052,@AmericanAir checkin fails AAAA1860 2hrs to go,checkin_boarding,0,auto,auto: routine checkin_boarding
+g053,@AmericanAir status not showing AAAA1676,loyalty_account,0,auto,auto: routine loyalty_account
+g054,@AmericanAir rude gate agent AAAA879 JFK pls help stranded tonight,complaint_service,1,human,human: complaint needs specialist
+g055,@AmericanAir great crew AAAA1519 thanks! pls help stranded tonight,praise_other,1,human,human: urgent/safety marker
+g056,"@AmericanAir stuck LAX delay, tonight hotel who pays AAAA1968",flight_delay,0,auto,auto: routine flight_delay
+g057,"@AmericanAir AAAA1050 cancelled, rebook to MIA asap pls help stranded tonight",cancellation,1,human,human: same-day rebook risk
+g058,@AmericanAir add checked bag booking PV9WYH AAAA1645,booking_change,0,auto,auto: routine booking_change
+g059,@AmericanAir bag delayed AAAA1192 CLT tag 52D5KC,baggage,0,auto,auto: routine baggage
+g060,@AmericanAir voucher for 2hr delay AAAA694?,refund_compensation,0,auto,auto: routine refund_compensation
+g061,@AmericanAir checkin fails AAAA1705 2hrs to go,checkin_boarding,0,auto,auto: routine checkin_boarding
+g062,@AmericanAir status not showing AAAA483,loyalty_account,0,auto,auto: routine loyalty_account
+g063,@AmericanAir rude gate agent AAAA1958 LAX pls help stranded tonight,complaint_service,1,human,human: complaint needs specialist
+g064,@AmericanAir wifi question AAAA760?,praise_other,0,auto,auto: routine praise_other
+g065,"@AmericanAir AAAA1297 1hr delay CLT, connection at risk",flight_delay,0,auto,auto: routine flight_delay
+g066,"@AmericanAir AAAA1800 cancelled, rebook to LAX asap",cancellation,1,human,human: same-day rebook risk
+g067,"@AmericanAir move AAAA573 to Sunday, cost?",booking_change,0,auto,auto: routine booking_change
+g068,@AmericanAir bag fee $75 wrong AAAA291,baggage,0,auto,auto: routine baggage
+g069,@AmericanAir trip credit missing AAAA219 5ZHJH2,refund_compensation,0,auto,auto: routine refund_compensation
+g070,@AmericanAir checkin fails AAAA198 2hrs to go,checkin_boarding,0,auto,auto: routine checkin_boarding
+g071,@AmericanAir miles missing AAAA1272,loyalty_account,0,auto,auto: routine loyalty_account
+g072,@AmericanAir DOT complaint AAAA706 worst ever,complaint_service,1,human,human: complaint needs specialist
+g073,@AmericanAir great crew AAAA1066 thanks!,praise_other,0,auto,auto: routine praise_other
+g074,"@AmericanAir stuck ORD delay, tonight hotel who pays AAAA1854",flight_delay,0,auto,auto: routine flight_delay
+g075,"@AmericanAir AAAA1466 cancelled, rebook to LAX asap",cancellation,1,human,human: same-day rebook risk
+g076,@AmericanAir add checked bag booking 8V4YM9 AAAA1419 pls help stranded tonight,booking_change,1,human,human: urgent/safety marker
+g077,@AmericanAir bag fee $75 wrong AAAA1946,baggage,0,auto,auto: routine baggage
+g078,@AmericanAir trip credit missing AAAA1354 R2DYEQ pls help stranded tonight,refund_compensation,1,human,human: urgent/safety marker
+g079,@AmericanAir checkin fails AAAA1060 2hrs to go,checkin_boarding,0,auto,auto: routine checkin_boarding
+g080,@AmericanAir miles missing AAAA1823,loyalty_account,0,auto,auto: routine loyalty_account
+g081,@AmericanAir rude gate agent AAAA534 CLT,complaint_service,1,human,human: complaint needs specialist
+g082,@AmericanAir wifi question AAAA126?,praise_other,0,auto,auto: routine praise_other
+g083,"@AmericanAir AAAA1918 3hr delay LAX, connection at risk",flight_delay,0,auto,auto: routine flight_delay
+g084,@AmericanAir why cancel AAAA562? need morning option,cancellation,0,auto,auto: routine cancellation
+g085,"@AmericanAir move AAAA1662 to Sunday, cost?",booking_change,0,auto,auto: routine booking_change
+g086,@AmericanAir bag delayed AAAA1923 LAX tag N7PECM,baggage,0,auto,auto: routine baggage
+g087,@AmericanAir trip credit missing AAAA1362 XTWZU8,refund_compensation,0,auto,auto: routine refund_compensation
+g088,@AmericanAir checkin fails AAAA1685 2hrs to go,checkin_boarding,0,auto,auto: routine checkin_boarding
+g089,@AmericanAir miles missing AAAA1750,loyalty_account,0,auto,auto: routine loyalty_account
+g090,@AmericanAir DOT complaint AAAA365 worst ever,complaint_service,1,human,human: complaint needs specialist
+g091,@AmericanAir great crew AAAA656 thanks! pls help stranded tonight,praise_other,1,human,human: urgent/safety marker
+g092,"@AmericanAir stuck JFK delay, tonight hotel who pays AAAA752 pls help stranded tonight",flight_delay,1,human,human: urgent/safety marker
+g093,@AmericanAir why cancel AAAA303? need morning option,cancellation,0,auto,auto: routine cancellation
+g094,"@AmericanAir move AAAA503 to Sunday, cost?",booking_change,0,auto,auto: routine booking_change
+g095,@AmericanAir bag fee $75 wrong AAAA595,baggage,0,auto,auto: routine baggage
+g096,@AmericanAir trip credit missing AAAA1102 MAKT4V,refund_compensation,0,auto,auto: routine refund_compensation
+g097,@AmericanAir gate for AAAA590 LAX? group 5 pls help stranded tonight,checkin_boarding,1,human,human: urgent/safety marker
+g098,@AmericanAir miles missing AAAA1208,loyalty_account,0,auto,auto: routine loyalty_account
+g099,@AmericanAir DOT complaint AAAA1443 worst ever,complaint_service,1,human,human: complaint needs specialist
+g100,@AmericanAir wifi question AAAA1401?,praise_other,0,auto,auto: routine praise_other
+g101,"@AmericanAir AAAA1995 3hr delay LAX, connection at risk pls help stranded tonight",flight_delay,1,human,human: urgent/safety marker
+g102,@AmericanAir why cancel AAAA1640? need morning option,cancellation,0,auto,auto: routine cancellation
+g103,@AmericanAir add checked bag booking X58Z5J AAAA968 pls help stranded tonight,booking_change,1,human,human: urgent/safety marker
+g104,@AmericanAir bag fee $75 wrong AAAA937,baggage,0,auto,auto: routine baggage
+g105,@AmericanAir voucher for 4hr delay AAAA784? pls help stranded tonight,refund_compensation,1,human,human: urgent/safety marker
+g106,@AmericanAir checkin fails AAAA104 2hrs to go pls help stranded tonight,checkin_boarding,1,human,human: urgent/safety marker
+g107,@AmericanAir status not showing AAAA1517,loyalty_account,0,auto,auto: routine loyalty_account
+g108,@AmericanAir DOT complaint AAAA1781 worst ever,complaint_service,1,human,human: complaint needs specialist
+g109,@AmericanAir wifi question AAAA312?,praise_other,0,auto,auto: routine praise_other
+g110,"@AmericanAir AAAA119 4hr delay DFW, connection at risk",flight_delay,0,auto,auto: routine flight_delay
+g111,"@AmericanAir AAAA941 cancelled, rebook to DFW asap",cancellation,1,human,human: same-day rebook risk
+g112,@AmericanAir add checked bag booking 6QR2XF AAAA1289,booking_change,0,auto,auto: routine booking_change
+g113,@AmericanAir bag fee $75 wrong AAAA706,baggage,0,auto,auto: routine baggage
+g114,@AmericanAir trip credit missing AAAA167 CJCP5X,refund_compensation,0,auto,auto: routine refund_compensation
+g115,@AmericanAir checkin fails AAAA1947 2hrs to go,checkin_boarding,0,auto,auto: routine checkin_boarding
+g116,@AmericanAir status not showing AAAA938,loyalty_account,0,auto,auto: routine loyalty_account
+g117,@AmericanAir DOT complaint AAAA503 worst ever,complaint_service,1,human,human: complaint needs specialist
+g118,@AmericanAir wifi question AAAA1169?,praise_other,0,auto,auto: routine praise_other
+g119,"@AmericanAir stuck DFW delay, tonight hotel who pays AAAA1990 pls help stranded tonight",flight_delay,1,human,human: urgent/safety marker
+g120,@AmericanAir why cancel AAAA555? need morning option,cancellation,0,auto,auto: routine cancellation
+g121,@AmericanAir add checked bag booking THW32G AAAA1400,booking_change,0,auto,auto: routine booking_change
+g122,@AmericanAir bag delayed AAAA386 JFK tag Q6XW3D,baggage,0,auto,auto: routine baggage
+g123,@AmericanAir voucher for 4hr delay AAAA1258?,refund_compensation,0,auto,auto: routine refund_compensation
+g124,@AmericanAir gate for AAAA829 LAX? group 5,checkin_boarding,0,auto,auto: routine checkin_boarding
+g125,@AmericanAir miles missing AAAA1174,loyalty_account,0,auto,auto: routine loyalty_account
+g126,@AmericanAir DOT complaint AAAA1186 worst ever,complaint_service,1,human,human: complaint needs specialist
+g127,@AmericanAir wifi question AAAA1298? pls help stranded tonight,praise_other,1,human,human: urgent/safety marker
+g128,"@AmericanAir stuck DFW delay, tonight hotel who pays AAAA894",flight_delay,0,auto,auto: routine flight_delay
+g129,"@AmericanAir AAAA813 cancelled, rebook to JFK asap",cancellation,1,human,human: same-day rebook risk
+g130,@AmericanAir add checked bag booking BM28TQ AAAA1960,booking_change,0,auto,auto: routine booking_change
+g131,@AmericanAir bag fee $75 wrong AAAA319 pls help stranded tonight,baggage,1,human,human: urgent/safety marker
+g132,@AmericanAir voucher for 4hr delay AAAA1695?,refund_compensation,0,auto,auto: routine refund_compensation
+g133,@AmericanAir checkin fails AAAA1334 2hrs to go,checkin_boarding,0,auto,auto: routine checkin_boarding
+g134,@AmericanAir miles missing AAAA1078,loyalty_account,0,auto,auto: routine loyalty_account
+g135,@AmericanAir rude gate agent AAAA1661 MIA pls help stranded tonight,complaint_service,1,human,human: complaint needs specialist
+g136,@AmericanAir wifi question AAAA834?,praise_other,0,auto,auto: routine praise_other
+g137,"@AmericanAir AAAA1637 2hr delay MIA, connection at risk",flight_delay,0,auto,auto: routine flight_delay
+g138,@AmericanAir why cancel AAAA1613? need morning option,cancellation,0,auto,auto: routine cancellation
+g139,"@AmericanAir move AAAA1491 to Sunday, cost?",booking_change,0,auto,auto: routine booking_change
+g140,@AmericanAir bag fee $75 wrong AAAA1635 pls help stranded tonight,baggage,1,human,human: urgent/safety marker
+g141,@AmericanAir voucher for 5hr delay AAAA338?,refund_compensation,0,auto,auto: routine refund_compensation
+g142,@AmericanAir gate for AAAA1887 JFK? group 5,checkin_boarding,0,auto,auto: routine checkin_boarding
+g143,@AmericanAir miles missing AAAA567,loyalty_account,0,auto,auto: routine loyalty_account
+g144,@AmericanAir rude gate agent AAAA552 CLT,complaint_service,1,human,human: complaint needs specialist
+g145,@AmericanAir wifi question AAAA1945?,praise_other,0,auto,auto: routine praise_other
+g146,"@AmericanAir AAAA1312 5hr delay DFW, connection at risk",flight_delay,0,auto,auto: routine flight_delay
+g147,@AmericanAir why cancel AAAA212? need morning option,cancellation,0,auto,auto: routine cancellation
+g148,@AmericanAir add checked bag booking TZNWPN AAAA895 pls help stranded tonight,booking_change,1,human,human: urgent/safety marker
+g149,@AmericanAir bag fee $75 wrong AAAA795,baggage,0,auto,auto: routine baggage
+g150,@AmericanAir voucher for 4hr delay AAAA1659?,refund_compensation,0,auto,auto: routine refund_compensation
+g151,@AmericanAir gate for AAAA1586 LAX? group 5,checkin_boarding,0,auto,auto: routine checkin_boarding
+g152,@AmericanAir miles missing AAAA259 pls help stranded tonight,loyalty_account,1,human,human: urgent/safety marker
+g153,@AmericanAir rude gate agent AAAA451 ORD,complaint_service,1,human,human: complaint needs specialist
+g154,@AmericanAir wifi question AAAA154?,praise_other,0,auto,auto: routine praise_other
+g155,"@AmericanAir AAAA128 3hr delay CLT, connection at risk",flight_delay,0,auto,auto: routine flight_delay
+g156,@AmericanAir why cancel AAAA1894? need morning option,cancellation,0,auto,auto: routine cancellation
+g157,@AmericanAir add checked bag booking RSDKTD AAAA1113 pls help stranded tonight,booking_change,1,human,human: urgent/safety marker
+g158,@AmericanAir bag delayed AAAA1644 ORD tag F7TW65,baggage,0,auto,auto: routine baggage
+g159,@AmericanAir voucher for 4hr delay AAAA433?,refund_compensation,0,auto,auto: routine refund_compensation
+g160,@AmericanAir gate for AAAA1967 MIA? group 5,checkin_boarding,0,auto,auto: routine checkin_boarding
+g161,@AmericanAir status not showing AAAA1273,loyalty_account,0,auto,auto: routine loyalty_account
+g162,@AmericanAir DOT complaint AAAA1091 worst ever,complaint_service,1,human,human: complaint needs specialist
+g163,@AmericanAir great crew AAAA137 thanks!,praise_other,0,auto,auto: routine praise_other
+g164,"@AmericanAir stuck CLT delay, tonight hotel who pays AAAA188",flight_delay,0,auto,auto: routine flight_delay
+g165,"@AmericanAir AAAA1809 cancelled, rebook to ORD asap",cancellation,1,human,human: same-day rebook risk
+g166,@AmericanAir add checked bag booking 9XHKFW AAAA1424 pls help stranded tonight,booking_change,1,human,human: urgent/safety marker
+g167,@AmericanAir bag fee $75 wrong AAAA1098,baggage,0,auto,auto: routine baggage
+g168,@AmericanAir voucher for 1hr delay AAAA387? pls help stranded tonight,refund_compensation,1,human,human: urgent/safety marker
+g169,@AmericanAir gate for AAAA733 DFW? group 5,checkin_boarding,0,auto,auto: routine checkin_boarding
+g170,@AmericanAir miles missing AAAA1640,loyalty_account,0,auto,auto: routine loyalty_account
+g171,@AmericanAir rude gate agent AAAA852 CLT,complaint_service,1,human,human: complaint needs specialist
+g172,@AmericanAir great crew AAAA526 thanks!,praise_other,0,auto,auto: routine praise_other
+g173,"@AmericanAir AAAA296 5hr delay MIA, connection at risk",flight_delay,0,auto,auto: routine flight_delay
+g174,"@AmericanAir AAAA1744 cancelled, rebook to CLT asap",cancellation,1,human,human: same-day rebook risk
+g175,@AmericanAir add checked bag booking JSKGK4 AAAA740,booking_change,0,auto,auto: routine booking_change
+g176,@AmericanAir bag fee $75 wrong AAAA1610,baggage,0,auto,auto: routine baggage
+g177,@AmericanAir trip credit missing AAAA1927 HTYUNH,refund_compensation,0,auto,auto: routine refund_compensation
+g178,@AmericanAir gate for AAAA1928 CLT? group 5,checkin_boarding,0,auto,auto: routine checkin_boarding
+g179,@AmericanAir status not showing AAAA1440,loyalty_account,0,auto,auto: routine loyalty_account
+g180,@AmericanAir rude gate agent AAAA1590 ORD,complaint_service,1,human,human: complaint needs specialist
+g181,@AmericanAir wifi question AAAA868? pls help stranded tonight,praise_other,1,human,human: urgent/safety marker
+g182,"@AmericanAir AAAA151 1hr delay DFW, connection at risk",flight_delay,0,auto,auto: routine flight_delay
+g183,"@AmericanAir AAAA1939 cancelled, rebook to LAX asap",cancellation,1,human,human: same-day rebook risk
+g184,"@AmericanAir move AAAA1936 to Sunday, cost?",booking_change,0,auto,auto: routine booking_change
+g185,@AmericanAir bag delayed AAAA643 ORD tag D5QN6S,baggage,0,auto,auto: routine baggage
+g186,@AmericanAir voucher for 4hr delay AAAA1279?,refund_compensation,0,auto,auto: routine refund_compensation
+g187,@AmericanAir gate for AAAA1646 CLT? group 5 pls help stranded tonight,checkin_boarding,1,human,human: urgent/safety marker
+g188,@AmericanAir status not showing AAAA1158 pls help stranded tonight,loyalty_account,1,human,human: urgent/safety marker
+g189,@AmericanAir DOT complaint AAAA955 worst ever,complaint_service,1,human,human: complaint needs specialist
+g190,@AmericanAir great crew AAAA986 thanks!,praise_other,0,auto,auto: routine praise_other
+g191,"@AmericanAir AAAA560 4hr delay DFW, connection at risk",flight_delay,0,auto,auto: routine flight_delay
+g192,@AmericanAir why cancel AAAA298? need morning option,cancellation,0,auto,auto: routine cancellation
+g193,"@AmericanAir move AAAA834 to Sunday, cost?",booking_change,0,auto,auto: routine booking_change
+g194,@AmericanAir bag fee $75 wrong AAAA1625 pls help stranded tonight,baggage,1,human,human: urgent/safety marker
+g195,@AmericanAir trip credit missing AAAA1215 V7GM8Q,refund_compensation,0,auto,auto: routine refund_compensation
+g196,@AmericanAir checkin fails AAAA103 2hrs to go,checkin_boarding,0,auto,auto: routine checkin_boarding
+g197,@AmericanAir miles missing AAAA754 pls help stranded tonight,loyalty_account,1,human,human: urgent/safety marker
+g198,@AmericanAir rude gate agent AAAA1264 DFW pls help stranded tonight,complaint_service,1,human,human: complaint needs specialist
+g199,@AmericanAir wifi question AAAA1022?,praise_other,0,auto,auto: routine praise_other

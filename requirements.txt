@@ -1,0 +1,2 @@
+﻿# stdlib only — no install needed. Optional (offline-safe): none.
+# If you want the OpenAI LLM-judge: pip install openai

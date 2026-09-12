@@ -1,0 +1,15 @@
+{
+  "brand": "AmericanAir",
+  "policies": [
+    {"id": "rebook", "text": "Cancelled flights: free rebooking on next available American flight via aa.com/manage or the app. No change fee for main-cabin+ fares."},
+    {"id": "delay_meal_hotel", "text": "Delays 3+ hrs: meal voucher. Overnight delay caused by us: hotel + transport, request at gate or Admirals Club desk."},
+    {"id": "bag_delay", "text": "Delayed bag: file a report within 4 hrs at baggage office or aa.com/baggage, tracking in app. Essential purchases reimbursed up to $150/day for 3 days with receipts."},
+    {"id": "bag_lost", "text": "Bag missing 5+ days: deemed lost, file claim at aa.com/baggageclaim with receipts. Liability up to $3800 domestic."},
+    {"id": "refund", "text": "Refundable tickets refund to original payment in 7 days. Non-refundable cancelled by us: refund or trip credit, apply at aa.com/refunds."},
+    {"id": "checkin", "text": "Check in from 24 hrs before departure in the app. Boarding pass: app, email, or kiosk. Gates close 15 min before departure domestic."},
+    {"id": "loyalty", "text": "AAdvantage miles post within 48 hrs. Missing miles: request at aa.com/missingmiles with ticket number. Never share passwords in DMs."},
+    {"id": "escalation", "text": "Safety, medical, discrimination, legal threats, unaccompanied minors: escalate to human specialist immediately with case number."}
+  ],
+  "voice": "Apologize once, state the concrete next step, cite where to act (link/desk), ask for DM with record locator (6-char code) when needed. Never invent flight status, compensation amounts, or policy.",
+  "links": {"manage": "aa.com/manage", "baggage": "aa.com/baggage", "refunds": "aa.com/refunds", "missingmiles": "aa.com/missingmiles", "app": "American Airlines app"}
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AmericanAir Agent — Eval Dashboard</title>
+<style>
+body{background:#FBFBFA;color:#2F3437;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;line-height:1.6}
+.wrap{max-width:960px;margin:0 auto;padding:64px 24px}
+h1,h2{font-family:Georgia,"Times New Roman",serif;letter-spacing:-0.02em;color:#111;line-height:1.1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:32px 0}
+.card{background:#fff;border:1px solid #EAEAEA;border-radius:8px;padding:24px}
+.k{font-family:Menlo,monospace;font-size:12px;color:#787774;text-transform:uppercase;letter-spacing:.05em}
+.v{font-size:32px;font-family:Georgia,serif;color:#111}
+.badge{display:inline-block;font-size:12px;text-transform:uppercase;letter-spacing:.05em;border-radius:9999px;padding:2px 10px;background:#EDF3EC;color:#346538}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #EAEAEA;border-radius:8px;overflow:hidden;font-size:14px}
+td,th{border-bottom:1px solid #EAEAEA;padding:10px 12px;text-align:left}th{font-family:Menlo,monospace;font-size:12px;color:#787774}
+pre{background:#fff;border:1px solid #EAEAEA;border-radius:8px;padding:16px;overflow:auto;font-size:13px}
+a{color:#1F6C9F}
+</style></head><body><div class="wrap">
+<p class="k">Hiver SDE Intern — AmericanAir Support Agent</p>
+<h1>Trust report, not just accuracy.</h1>
+<p>Open after <code>python run_eval.py</code>. Reads <code>results/metrics.json</code>. <span class="badge">offline</span></p>
+<div class="grid" id="cards"></div>
+<h2>Model comparison</h2><table id="tbl"><tr><th>model</th><th>intent F1</th><th>esc F1</th><th>reply /5</th></tr></table>
+<h2>Agreement + failures</h2><pre id="meta">run the pipeline first…</pre>
+<script>
+fetch("results/metrics.json").then(r=>r.json()).then(d=>{
+ const main=d["main(nb-bigram+kb-grounded+policy-router)"];
+ document.getElementById("cards").innerHTML=
+ `<div class="card"><div class="k">intent macro F1</div><div class="v">${main.intent_macroF1}</div></div>`+
+ `<div class="card"><div class="k">escalation F1</div><div class="v">${main.esc_F1}</div></div>`+
+ `<div class="card"><div class="k">reply overall</div><div class="v">${main.reply_overall} / 5</div></div>`+
+ `<div class="card"><div class="k">judge-human kappa</div><div class="v">${d._agreement.cohen_kappa}</div><div class="k">n=${d._agreement.n}</div></div>`;
+ let rows="";
+ for(const k of Object.keys(d)){ if(k.startsWith("_"))continue; rows+=`<tr><td>${d[k].name}</td><td>${d[k].intent_macroF1}</td><td>${d[k].esc_F1}</td><td>${d[k].reply_overall}</td></tr>`; }
+ document.querySelector("#tbl").innerHTML+="<tr>"+rows+"</tr>";
+ document.getElementById("meta").textContent="kappa="+d._agreement.cohen_kappa+" ("+d._agreement.note+")\n\nTop failures:\n"+d._failures.slice(0,5).map(f=>"- "+f.id+" true="+f.true+" pred="+f.pred+" route "+f.true_route+"->"+f.pred_route+" | "+f.text.slice(0,90)).join("\n");
+});
+</script></div></body></html>
