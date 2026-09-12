@@ -24,7 +24,7 @@ Main trades 0.7pts intent for +37pts escalation over simple and wins groundednes
 5. Short/typo: `aa 451 dlyd jfk pls` conf 0.4 -> human (correct route, wrong intent). Acceptable: routing matters more; fix with char-ngrams + spell norm.
 
 ## 6. What is misleading about my headline number?
-Three ways headline flatters: (i) golden is synthetic + stratified-balanced, real stream is 60% delay/cancel praise-heavy with harder tail — macroF1 overstates real accuracy; (ii) reply 4.2/5 from heuristic judge rewards template keywords (aa.com, DM) so verbosity/template-matching inflates vs human nuance; kappa 0.39 on 60 author-rated items is only fair (single rater, same author built templates; skewed 4-5 marginals depress kappa); (iii) escF1 benefits from always-escalate-tilted gold (many curated urgent) — precision looks better than on calm real traffic where over-escalation costs. Read confusion + failures, not single F1.
+Three ways headline flatters: (i) golden is synthetic + stratified-balanced, real stream is 60% delay/cancel praise-heavy with harder tail — macroF1 overstates real accuracy; (ii) reply 4.13/5 from heuristic judge rewards template keywords (aa.com, DM) so verbosity/template-matching inflates vs human nuance; kappa 0.39 on 60 author-rated items is only fair (single rater, same author built templates; skewed 4-5 marginals depress kappa); (iii) escF1 benefits from always-escalate-tilted gold (many curated urgent) — precision looks better than on calm real traffic where over-escalation costs. Read confusion + failures, not single F1.
 
 ## 7. What next with one more week
 Day 1-2: replace generator slice with 10k real Kaggle AmericanAir threads, re-label 50; Day 3: embedding retriever (MiniLM) + de-dup + citation check; Day 4: multi-label intent + PII redactor; Day 5: blind second rater + adjudication, report calibrated ECE + cost-of-escalation curve; Day 6-7: shadow-mode logging + abstention threshold tuning on live-like stream.
@@ -35,7 +35,7 @@ Day 1-2: replace generator slice with 10k real Kaggle AmericanAir threads, re-la
 - Subsample 3000: reviewer-time bound, seed-fixed, schema-identical to Kaggle.
 - No dependency: pure-stdlib Naive Bayes, ~60-90s on laptop CPU, explainable live.
 - NB posterior as confidence with 0.55 threshold: honest-enough conf for router without calibration lib.
-- Char+word TF-IDF 12k: handles @, AA123, typos without embeddings download.
+- Word + bigram tokenizer, no embeddings download: handles @, AA123 and typos with bigrams; no install, explainable live.
 - KB of 8 policies: every reply must cite; blocks hallucinated amounts/status.
 - Template replier over free LLM: guarantees grounding offline; LLM optional.
 - Router conf 0.55 + <4 words + complaint-always-human: favors safe escalation.

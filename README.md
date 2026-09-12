@@ -74,7 +74,3 @@ The full Kaggle `thoughtvector/customer-support-on-twitter` (~3M tweets) is not 
 - `Dashboard shows old numbers` — rerun `python run_eval.py` first; the page reads `results/metrics.json` fresh each load (hard-refresh).
 - `fetch failed on file://` — serve via `python -m http.server 8000`, do not double-click the HTML.
 - `Fresh start` — delete `data/threads_sample.csv` + `eval/golden.csv` and rerun; both regenerate deterministically.
-
-## How to submit (per brief)
-
-Send repo link + report to `anurag@hiverhq.com`. This README is the repro guide; `REPORT.md` is the 6-page report.
